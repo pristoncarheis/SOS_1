@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "673185145956",
+    "firebase_url": "https://sosproject-d050d.firebaseio.com",
+    "project_id": "sosproject-d050d",
+    "storage_bucket": "sosproject-d050d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673185145956:android:de46348fc7a002f6",
+        "android_client_info": {
+          "package_name": "pcrc.sos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673185145956-ni5k7i4n7ckbics8srh39rvngepru40f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pcrc.sos",
+            "certificate_hash": "960a045a3e10ef1b26fb582916882ce2be7325e8"
+          }
+        },
+        {
+          "client_id": "673185145956-8r4jsvh2qa4kba3bcgn5didse7sscojo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8R8T3e7FLY30wQc8roZNAKMQB1IZPOFQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "673185145956-8r4jsvh2qa4kba3bcgn5didse7sscojo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
