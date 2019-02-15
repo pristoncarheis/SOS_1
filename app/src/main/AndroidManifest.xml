@@ -12,6 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Menu_Top.Forum"></activity>
+        <activity android:name=".Menu_Top.Denuncias" />
+        <activity android:name=".Login.Register" />
+        <activity android:name=".Login.Options" />
+        <activity android:name=".Login.Login" />
         <activity
             android:name=".Main"
             android:label="@string/app_name"

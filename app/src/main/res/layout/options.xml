@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/diez"
+            android:layout_marginRight="@dimen/diez"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/diez"
+            android:paddingRight="@dimen/diez">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/options_nombres"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_marginTop="@dimen/diez"
+                android:background="@drawable/buton_login">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/diez"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_name"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:drawablePadding="@dimen/diez"
+                    android:hint="@string/fullname"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:layout_marginStart="@dimen/diez" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/options_dni"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_marginTop="@dimen/diez"
+                android:background="@drawable/buton_login"
+                app:counterEnabled="true"
+                app:counterMaxLength="20">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/diez"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_dni"
+                    android:drawableLeft="@drawable/ic_dni"
+                    android:drawablePadding="@dimen/diez"
+                    android:hint="@string/dni"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:layout_marginStart="@dimen/diez" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/options_celular"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_marginTop="@dimen/diez"
+                android:background="@drawable/buton_login">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/diez"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:drawablePadding="@dimen/diez"
+                    android:hint="@string/phone"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="9"
+                    android:layout_marginStart="@dimen/diez" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/options_direccion"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_marginTop="@dimen/diez"
+                android:background="@drawable/buton_login">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/diez"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_address"
+                    android:drawableLeft="@drawable/ic_address"
+                    android:drawablePadding="@dimen/diez"
+                    android:hint="@string/address"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPostalAddress"
+                    android:layout_marginStart="@dimen/diez" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_marginTop="@dimen/diez"
+                android:layout_marginBottom="@dimen/veinte"
+                android:background="@drawable/buton_login"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/gender"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/options_hombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/options_mujer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/female" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/options_guardar"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="@dimen/ciensiete"
+                android:layout_height="@dimen/sesenta"
+                android:layout_marginTop="@dimen/veinte"
+                android:layout_marginBottom="@dimen/treinta"
+                android:text="@string/save_data" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

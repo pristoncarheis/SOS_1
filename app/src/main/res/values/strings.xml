@@ -18,4 +18,21 @@
     <string name="ubicacion_automatica">Ubicación automática</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
     <string name="compartir_app">Invitar a mis amigos a través de...</string>
+    <string name="fullname">Nombres completos</string>
+    <string name="dni">DNI</string>
+    <string name="phone">Celular</string>
+    <string name="address">Dirección</string>
+    <string name="gender">Género :</string>
+    <string name="male">Masculino</string>
+    <string name="female">Femenino</string>
+    <string name="termsandcondit">Al registrarme, acepto los Términos y Condiciones</string>
+    <string name="register">Registrate</string>
+    <string name="enter">Ingresar</string>
+    <string name="recovery_pass">Olvidastes tu contraseña</string>
+    <string name="new_pass">Nueva contraseña</string>
+    <string name="confirm_pass">Confirmar contraseña</string>
+    <string name="create_account">Crear cuenta</string>
+    <string name="send_to_login">¿Ya tienes una cuenta? ¡Inicia Sesión!</string>
+    <string name="save_data">Guardar datos</string>
+    <string name="todo">TODO</string>
 </resources>

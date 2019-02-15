@@ -16,6 +16,9 @@ import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
+import pcrc.sos.Login.Register;
+import pcrc.sos.Menu_Top.Denuncias;
+import pcrc.sos.Menu_Top.Forum;
 import pcrc.sos.Start.Start;
 
 public class Main extends AppCompatActivity
@@ -77,9 +80,9 @@ public class Main extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.complaint) {
-            Toast.makeText(this, "Denuncias", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, Denuncias.class));
         } else if (id == R.id.forum) {
-            Toast.makeText(this, "Foro", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, Forum.class));
         }
 
         return super.onOptionsItemSelected(item);
@@ -91,7 +94,7 @@ public class Main extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.profile) {
-            Toast.makeText(this, "Mi Perfil", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, Register.class));
         } else if (id == R.id.information) {
             Toast.makeText(this, "Informacion", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.contac_us) {
