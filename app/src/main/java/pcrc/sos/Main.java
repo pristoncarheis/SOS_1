@@ -3,6 +3,7 @@ package pcrc.sos;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +17,20 @@ import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import javax.annotation.Nullable;
+
+import pcrc.sos.Login.Login;
+import pcrc.sos.Login.Options;
 import pcrc.sos.Login.Register;
 import pcrc.sos.Menu_Top.Denuncias;
 import pcrc.sos.Menu_Top.Forum;
@@ -24,10 +39,17 @@ import pcrc.sos.Start.Start;
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private FirebaseAuth auth;
+    private FirebaseFirestore firestore;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        auth = FirebaseAuth.getInstance();
+        firestore = FirebaseFirestore.getInstance();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -57,6 +79,40 @@ public class Main extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.contenedor, new Start()).commit();
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser firebaseUser=auth.getCurrentUser();
+        if (firebaseUser == null) {
+            SendToLogin();
+        }
+        else{
+            CheckUserExistence();
+        }
+    }
+
+    private void CheckUserExistence() {
+        final String userID = auth.getCurrentUser().getUid();
+        firestore.collection("Usuarios").document(userID).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.getResult().exists()){
+
+                } else {
+                    SendUserToOptions();
+                }
+            }
+        });
+    }
+
+    private void SendUserToOptions() {
+        Intent options = new Intent(Main.this, Options.class);
+        options.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(options);
+        finish();
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -94,7 +150,6 @@ public class Main extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.profile) {
-            startActivity(new Intent(this, Register.class));
         } else if (id == R.id.information) {
             Toast.makeText(this, "Informacion", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.contac_us) {
@@ -108,11 +163,19 @@ public class Main extends AppCompatActivity
         } else if (id == R.id.sw_location) {
 
         } else if (id == R.id.sing_off) {
-            Toast.makeText(this, "Sesión finalizada", Toast.LENGTH_SHORT).show();
+            auth.signOut();
+            SendToLogin();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void SendToLogin() {
+        Intent login = new Intent(Main.this, Login.class);
+        login.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(login);
+        finish();
     }
 }

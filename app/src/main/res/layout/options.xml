@@ -26,37 +26,38 @@
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/options_nombres"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_height="@dimen/sesenta"
                 android:layout_marginTop="@dimen/diez"
-                android:background="@drawable/buton_login">
+                android:background="@drawable/buton_login"
+                android:gravity="center"
+                android:paddingStart="@dimen/veinte"
+                android:paddingLeft="@dimen/veinte">
 
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/diez"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:drawableStart="@drawable/ic_name"
                     android:drawableLeft="@drawable/ic_name"
                     android:drawablePadding="@dimen/diez"
                     android:hint="@string/fullname"
                     android:imeOptions="actionNext"
-                    android:inputType="textPersonName"
-                    android:layout_marginStart="@dimen/diez" />
+                    android:inputType="textPersonName" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/options_dni"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_height="@dimen/sesenta"
                 android:layout_marginTop="@dimen/diez"
                 android:background="@drawable/buton_login"
-                app:counterEnabled="true"
-                app:counterMaxLength="20">
+                android:gravity="center"
+                android:paddingStart="@dimen/veinte"
+                android:paddingLeft="@dimen/veinte">
 
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/diez"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:drawableStart="@drawable/ic_dni"
                     android:drawableLeft="@drawable/ic_dni"
@@ -64,21 +65,22 @@
                     android:hint="@string/dni"
                     android:imeOptions="actionNext"
                     android:inputType="number"
-                    android:maxLength="8"
-                    android:layout_marginStart="@dimen/diez" />
+                    android:maxLength="8" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/options_celular"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_height="@dimen/sesenta"
                 android:layout_marginTop="@dimen/diez"
-                android:background="@drawable/buton_login">
+                android:background="@drawable/buton_login"
+                android:gravity="center"
+                android:paddingStart="@dimen/veinte"
+                android:paddingLeft="@dimen/veinte">
 
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/diez"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:drawableStart="@drawable/ic_phone"
                     android:drawableLeft="@drawable/ic_phone"
@@ -86,34 +88,35 @@
                     android:hint="@string/phone"
                     android:imeOptions="actionNext"
                     android:inputType="phone"
-                    android:maxLength="9"
-                    android:layout_marginStart="@dimen/diez" />
+                    android:maxLength="9" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/options_direccion"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_height="@dimen/sesenta"
                 android:layout_marginTop="@dimen/diez"
-                android:background="@drawable/buton_login">
+                android:background="@drawable/buton_login"
+                android:gravity="center"
+                android:paddingStart="@dimen/veinte"
+                android:paddingLeft="@dimen/veinte">
 
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/diez"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:drawableStart="@drawable/ic_address"
                     android:drawableLeft="@drawable/ic_address"
                     android:drawablePadding="@dimen/diez"
                     android:hint="@string/address"
                     android:imeOptions="actionDone"
-                    android:inputType="textPostalAddress"
-                    android:layout_marginStart="@dimen/diez" />
+                    android:inputType="textPostalAddress" />
             </android.support.design.widget.TextInputLayout>
 
             <RadioGroup
+                android:id="@+id/options_group"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_height="@dimen/sesenta"
                 android:layout_marginTop="@dimen/diez"
                 android:layout_marginBottom="@dimen/veinte"
                 android:background="@drawable/buton_login"
@@ -127,14 +130,12 @@
                     android:textSize="18sp" />
 
                 <RadioButton
-                    android:id="@+id/options_hombre"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/male" />
 
                 <RadioButton
-                    android:id="@+id/options_mujer"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

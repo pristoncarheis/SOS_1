@@ -3,6 +3,8 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="pcrc.sos">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <dist:module dist:instant="true" />
 
     <application
@@ -12,21 +14,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Menu_Top.Forum"></activity>
-        <activity android:name=".Menu_Top.Denuncias" />
-        <activity android:name=".Login.Register" />
-        <activity android:name=".Login.Options" />
-        <activity android:name=".Login.Login" />
+        <activity android:name=".Login.Terms"></activity>
         <activity
             android:name=".Main"
+            android:configChanges="screenSize|orientation"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login.Register"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Login.Login"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Menu_Top.Forum" />
+        <activity android:name=".Menu_Top.Denuncias" />
+        <activity android:name=".Login.Options" />
     </application>
 
 </manifest>

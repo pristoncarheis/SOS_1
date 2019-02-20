@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/diez"
+                android:text="@string/reset_password"
+                android:textSize="@dimen/veinte"
+                android:textStyle="italic" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/recovery_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cincuentaysiete"
+                android:layout_marginLeft="@dimen/veinte"
+                android:layout_marginTop="@dimen/diez"
+                android:layout_marginRight="@dimen/veinte"
+                android:background="@drawable/buton_login"
+                android:gravity="center"
+                android:paddingStart="@dimen/veinte"
+                android:paddingLeft="@dimen/veinte"
+                app:errorTextAppearance="@style/CustomTextInputLayoutStyle.ErrorTextStyle"
+                app:hintTextAppearance="@style/CustomTextInputLayoutStyle.ErrorTextStyle">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:drawablePadding="@dimen/diez"
+                    android:hint="@string/correo"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/recovery_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/treinta"
+                android:layout_marginBottom="@dimen/diez"
+                android:text="Enviar" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -16,6 +16,7 @@
     <dimen name="veinte">20dp</dimen>
     <dimen name="veinticinco">25dp</dimen>
     <dimen name="treinta">30dp</dimen>
+    <dimen name="sesentaycinco">65dp</dimen>
     <dimen name="cien">100dp</dimen>
     <dimen name="ciensiete">170dp</dimen>
     <dimen name="tres">3dp</dimen>
